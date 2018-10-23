@@ -7,7 +7,7 @@
       </router-link>
 
     </div>
-    <citySearch></citySearch>
+    <citySearch :cities="cities"></citySearch>
     <cityList
     :cities="cities"
     :hotCities="hotCities"

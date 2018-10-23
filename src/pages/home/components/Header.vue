@@ -17,11 +17,16 @@
 </template>
 
 <script>
+import {mapState, mapGetters} from 'vuex'
 export default {
   name: 'homeHeader',
-  props: {
-    city: String
+  computed: {
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity'])
   }
+  // props: {
+  //   city: String
+  // }
 }
 </script>
 // scoped 只对当前组件样式有效
@@ -51,7 +56,8 @@ export default {
       color #ccc
       border-radius .1rem
     .header-right
-      width: 1.24rem
+      min-width: 1.04rem
+      padding 0 .1rem
       float: right
       text-align center
       color white
